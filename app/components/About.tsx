@@ -5,9 +5,9 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className="flex flex-col justify-center px-16 py-2 font-mono mt-7">
+    <div className="flex flex-col justify-center px-16 py-2 font-mono my-7">
       <div>
-        <h1 className="text-center text-4xl font-bold">About me</h1>
+        <h1 className="text-center text-4xl font-bold">A Little About Me</h1>
         <p className="md:p-8 md:px-32 text-justify">
           I'm a CS Sophomore on a gap year between universities. I'm also a
           Co-Founder at Stockpile Labs - a decentralized community derived
@@ -24,7 +24,8 @@ const About = (props: Props) => {
           <br />
           <br />
           Apart from my technological passions, I play competitive cricket at a
-          professional level,
+          professional level, am an avid Manchester City supporter and geek out
+          about fitness and health optimization.
         </p>
       </div>
     </div>

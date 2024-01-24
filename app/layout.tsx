@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-slate-300 dark:bg-black mx-4 md:mx-16`}
+        className={`${inter.className} bg-slate-300 dark:bg-black -mr-8 mx-4 md:mx-16`}
       >
         <ThemeProvider
           attribute="class"
@@ -32,6 +34,8 @@ export default function RootLayout({
           <Navbar />
           {children}
           <About />
+          <Skills />
+          <Projects />
           <Footer />
         </ThemeProvider>
       </body>

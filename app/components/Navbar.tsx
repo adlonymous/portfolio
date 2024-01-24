@@ -2,6 +2,7 @@ import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ModeToggle } from "./DarkToggle";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 type Props = {};
 
@@ -11,10 +12,12 @@ const Navbar = (props: Props) => {
       <div className="flex sm:flex-row justify-between mx-auto">
         <div className="grid grid-cols-2 ml-6">
           <Avatar>
-            <AvatarImage
-              src="https://github.com/adlonymous/portfolio/assets/93305952/9629b7c8-d7ac-4528-ad5d-cd8374f34298"
-              alt="@aadil"
-            />
+            <Link href="/">
+              <AvatarImage
+                src="https://github.com/adlonymous/portfolio/assets/93305952/9629b7c8-d7ac-4528-ad5d-cd8374f34298"
+                alt="@aadil"
+              />
+            </Link>
             <AvatarFallback>ME</AvatarFallback>
           </Avatar>
         </div>
@@ -22,19 +25,19 @@ const Navbar = (props: Props) => {
           <ul className="flex space-x-6 text-black dark:text-white mt-2 px-6 ">
             <li>
               <a href="#" className="hover:text-gray-300">
-                Home
-              </a>
-            </li>
-            <Separator orientation="vertical" />
-            <li>
-              <a href="#" className="hover:text-gray-300">
                 About
               </a>
             </li>
             <Separator orientation="vertical" />
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <Link href="#" className="hover:text-gray-300">
                 Skills
+              </Link>
+            </li>
+            <Separator orientation="vertical" />
+            <li>
+              <a href="#" className="hover:text-gray-300">
+                Projects
               </a>
             </li>
             <Separator orientation="vertical" />

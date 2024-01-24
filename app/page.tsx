@@ -1,21 +1,46 @@
+"use client";
+import React from "react";
 import Image from "next/image";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { heropictures } from "@/lib/data";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen md:flex-row flex-col items-center justify-start -mb-12 py-28 pb-2 px-16 md:p-24 -my-20 font-mono -ml-4 md:ml-0">
+    <main className="flex min-h-screen md:flex-row flex-col items-center justify-start -mb-12 py-28 px-16 md:p-24 -my-20 font-mono -ml-2 md:ml-0">
       <div>
-        <Image
+        <Carousel
+          plugins={[Autoplay({ delay: 6000 })]}
+          className="w-full max-w-sm transform rotate-2 border border-slate-900 rounded-2xl"
+        >
+          <CarouselContent>
+            {heropictures.map((heropicture) => (
+              <Image
+                src={heropicture}
+                alt="Aadil"
+                width={400}
+                height={400}
+                className=" "
+              />
+            ))}
+          </CarouselContent>
+        </Carousel>
+        {/* <Image
           src="https://github.com/adlonymous/portfolio/assets/93305952/4e674cfb-2b04-43f0-afcf-b28f6ed74945"
           alt="Aadil"
           width={400}
           height={400}
           className="rounded-2xl transform rotate-3  border border-blue-400 "
-        />
+        /> */}
       </div>
       <div className="text-center mb-4 mt-12 md:ml-52 bg-slate-100 dark:bg-slate-900/90 p-2 rounded-xl py-4">
         <div>
