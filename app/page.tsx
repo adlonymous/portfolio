@@ -13,24 +13,31 @@ import {
 } from "@/components/ui/carousel";
 import { heropictures } from "@/lib/data";
 import Autoplay from "embla-carousel-autoplay";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen md:flex-row flex-col items-center justify-start -mb-12 py-28 px-16 md:p-24 -my-20 font-mono -ml-2 md:ml-0">
       <div>
         <Carousel
-          plugins={[Autoplay({ delay: 6000 })]}
-          className="w-full max-w-sm transform rotate-2 border border-slate-900 rounded-2xl"
+          plugins={[Autoplay({ delay: 3500 })]}
+          className="md:w-full w-74 max-w-md transform rotate-2"
         >
           <CarouselContent>
             {heropictures.map((heropicture) => (
-              <Image
-                src={heropicture}
-                alt="Aadil"
-                width={400}
-                height={400}
-                className=" "
-              />
+              <CarouselItem>
+                <div>
+                  <CardContent>
+                    <Image
+                      src={heropicture}
+                      alt="Aadil"
+                      height={500}
+                      width={500}
+                      className="rounded-3xl"
+                    />
+                  </CardContent>
+                </div>
+              </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
@@ -42,11 +49,12 @@ export default function Home() {
           className="rounded-2xl transform rotate-3  border border-blue-400 "
         /> */}
       </div>
-      <div className="text-center mb-4 mt-12 md:ml-52 bg-slate-100 dark:bg-slate-900/90 p-2 rounded-xl py-4">
+      <div className="text-center mb-4 mt-2 md:ml-36 bg-slate-100 dark:bg-slate-900/90 p-4 rounded-xl py-4">
         <div>
           <h1 className="text-3xl md:text-5xl italic mb-2">
             Hey, I'm Aadil 👋
           </h1>
+          <p>&nbsp;</p>
           <p className="text-lg md:text-xl mb-4">
             Software Developer, Entrepreneur <br />& Cricketer
           </p>
