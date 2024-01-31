@@ -45,14 +45,16 @@ export default async function Post({ params: { postId } }: Props) {
   const pubDate = getFormattedDate(meta.date);
 
   const tags = meta.tags.map((tag, i) => (
-    <Link key={i} href={`/tags/${tag}`} className="bg-gray-400 p-1 rounded-md">
+    <Link key={i} href={`/tags/${tag}`} className="bg-slate-100 p-1 rounded-md">
       {tag}
     </Link>
   ));
 
   return (
-    <div className="md:mx-16 mx-6">
-      <h1 className="text-5xl text-center pt-5"> Aadil's Blog</h1>
+    <div className="md:mx-16 pt-6 mx-6">
+      <a className="mb-10 mt-5 p-2 bg-slate-100 rounded-md">
+        <Link href="/">⇠&ensp;Back to home</Link>
+      </a>
       <h2 className="text-4xl text-center pt-1 mt-4 mb-0">{meta.title}</h2>
       <p className="mt-0 text-2xl text-center pb-4">{pubDate}</p>
       <article className="md:mx-16 mx-4">{content}</article>
@@ -60,9 +62,6 @@ export default async function Post({ params: { postId } }: Props) {
         <h3 className="text-center">Related</h3>
         <div className="flex flex-row gap-4 justify-center pt-1">{tags}</div>
       </section>
-      <p className="mb-10 mt-5">
-        <Link href="/">Back to home</Link>
-      </p>
     </div>
   );
 }
