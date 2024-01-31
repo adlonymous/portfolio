@@ -13,7 +13,7 @@ export const frameworkstools = [
   "ReactJS",
   "NextJS",
   "NodeJS",
-  "TailwindCSS",
+  "Astro",
   "Prisma",
   "MongoDB",
 ];

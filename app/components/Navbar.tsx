@@ -24,25 +24,25 @@ const Navbar = (props: Props) => {
         <div className="bg-slate-100 dark:bg-slate-900/90 rounded-xl shadow-xl hidden sm:block dark:shadow-slate-900">
           <ul className="flex space-x-6 text-black dark:text-white mt-2 px-6 ">
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <a href="/#About" className="hover:text-gray-300">
                 About
               </a>
             </li>
             <Separator orientation="vertical" />
             <li>
-              <Link href="#" className="hover:text-gray-300">
+              <Link href="/#Skills" className="hover:text-gray-300">
                 Skills
               </Link>
             </li>
             <Separator orientation="vertical" />
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <a href="/#Projects" className="hover:text-gray-300">
                 Projects
               </a>
             </li>
             <Separator orientation="vertical" />
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <a href="/#Blog" className="hover:text-gray-300">
                 Blog
               </a>
             </li>

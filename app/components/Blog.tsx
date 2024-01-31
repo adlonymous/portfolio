@@ -1,14 +1,21 @@
-import React from "react";
+import { getPostsMeta } from "@/lib/posts";
+import ListItem from "./ListItem";
 
-type Props = {};
+export default async function Posts() {
+  const posts = await getPostsMeta();
 
-const Blog = (props: Props) => {
+  if (!posts) {
+    return <p className="mt-10 text-center">Sorry, no posts available</p>;
+  }
+
   return (
-    <div className="text-center p-8 font-mono">
-      <h1 className="text-4xl font-bold"> My Blog </h1>
-      <p className="p-16">Coming Soon!</p>
-    </div>
+    <section className="mt-12 mx-auto max-w-2xl">
+      <h1 className="text-center text-4xl font-bold">My Blog</h1>
+      <ul className="w-full indent-8 list-none p-4">
+        {posts.map((post) => (
+          <ListItem key={post.id} post={post} />
+        ))}
+      </ul>
+    </section>
   );
-};
-
-export default Blog;
+}
